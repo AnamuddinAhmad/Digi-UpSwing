@@ -8,7 +8,7 @@ html,
 body {
   height: 100%;
   width: 100%;
-  font-family: sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 body::-webkit-scrollbar {
@@ -19,22 +19,9 @@ main {
   height: 150vh;
   width: 100%;
   position: relative;
-  background: rgba(255, 255, 255, 0.1);
-  z-index: 1;
-}
-
-main::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: url("https://imgs.search.brave.com/yUnQGIdaVv0oJpC_Wl2SEJjXkcz8aIZkN9o7Oqa0wz8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTE5/MjIzNjE1OC9waG90/by9leHBsb3Npb24t/b2YtY29sb3JlZC1w/b3dkZXItb24tYmxh/Y2stYmFja2dyb3Vu/ZC5qcGc_cz02MTJ4/NjEyJnc9MCZrPTIw/JmM9UXktTC0ycG41/R3dPSjBqNFoxMl9v/Z0pwT21Vd1JyX0ZS/NEstQmViRkJSTT0")
-    no-repeat center center/cover;
-  background-position: center;
-  filter: blur(9px);
-  z-index: -1;
+  background-color: black;
+  overflow-x: hidden;
+  color: white;
 }
 
 nav {
@@ -44,25 +31,29 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2vw;
+  padding: 1vw 2.5vw;
+  background-color: black;
+  color: white;
+  border-bottom: 1px solid white;
 }
 
 .nav-link {
-  font-weight: 600;
+  font-weight: 500;
   display: flex;
-  gap: 1vw;
+  gap: 2.5vw;
 }
 
 .nav-link > a {
   font-size: 1.6vw;
-  color: black;
   opacity: 0.8;
   text-decoration: none;
   position: relative;
-  transition: color 0.5s ease-in-out;
+  transition: text-shadow 0.5s ease-in-out;
+  color: white;
 }
 
 .nav-link a:hover {
+  text-shadow: 4px 4px 10px rgba(221, 221, 221, 0.8);
   opacity: 1;
 }
 
@@ -71,7 +62,7 @@ nav {
   position: absolute;
   height: 2px;
   width: 0;
-  background-color: black;
+  background-color: white;
   opacity: 0.8;
   bottom: -2px;
   left: 0;
@@ -85,7 +76,6 @@ nav {
 .logo {
   font-size: 1.8vw;
   margin-right: 2vw;
-  color: black;
   opacity: 0.8;
   transition: opacity 0.4s ease-in-out;
 }
@@ -95,8 +85,29 @@ nav {
   cursor: pointer;
 }
 
-.text{
+.wraper {
+  padding-left: 1.9vw;
+}
 
-    font-size: 17vw;
-    color: white;
+.text {
+  font-size: 16vw;
+  color: white;
+  display: flex;
+  align-items: center;
+  text-shadow: 10px 10px 15px rgba(221, 221, 221, 0.8);
+}
+
+.Swing {
+  margin-top: -50px;
+  margin-left: 12vw;
+  font-size: 16vw;
+  color: white;
+  text-shadow: 10px 10px 10px rgba(221, 221, 221, 0.8);
+}
+
+.des{
+    opacity: .7;
+    width: 60%;
+    margin-top: 1.5vw;
+    margin-left: 5vw;
 }
