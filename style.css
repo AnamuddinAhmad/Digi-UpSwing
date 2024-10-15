@@ -1,18 +1,102 @@
-*{
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html,body{
-    height: 100%;
-    width: 100%;
-    font-family: sans-serif;
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: sans-serif;
 }
 
-main{
-    height: 100%;
-    width: 100%;
-    background-color: black;
-    color: wheat;
+body::-webkit-scrollbar {
+  display: none;
+}
+
+main {
+  height: 150vh;
+  width: 100%;
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 1;
+}
+
+main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: url("https://imgs.search.brave.com/yUnQGIdaVv0oJpC_Wl2SEJjXkcz8aIZkN9o7Oqa0wz8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTE5/MjIzNjE1OC9waG90/by9leHBsb3Npb24t/b2YtY29sb3JlZC1w/b3dkZXItb24tYmxh/Y2stYmFja2dyb3Vu/ZC5qcGc_cz02MTJ4/NjEyJnc9MCZrPTIw/JmM9UXktTC0ycG41/R3dPSjBqNFoxMl9v/Z0pwT21Vd1JyX0ZS/NEstQmViRkJSTT0")
+    no-repeat center center/cover;
+  background-position: center;
+  filter: blur(9px);
+  z-index: -1;
+}
+
+nav {
+  /* background-color: aquamarine; */
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2vw;
+}
+
+.nav-link {
+  font-weight: 600;
+  display: flex;
+  gap: 1vw;
+}
+
+.nav-link > a {
+  font-size: 1.6vw;
+  color: black;
+  opacity: 0.8;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.5s ease-in-out;
+}
+
+.nav-link a:hover {
+  opacity: 1;
+}
+
+.nav-link a::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0;
+  background-color: black;
+  opacity: 0.8;
+  bottom: -2px;
+  left: 0;
+  transition: width 0.5s ease-in-out;
+}
+
+.nav-link a:hover::before {
+  width: 100%;
+}
+
+.logo {
+  font-size: 1.8vw;
+  margin-right: 2vw;
+  color: black;
+  opacity: 0.8;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.logo:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.text{
+
+    font-size: 17vw;
+    color: white;
 }
